@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="theme-color" content="#000000">
+
+  <link rel="shortcut icon" href="./favicon.png">
+
+  <!--
+    Do not use @8 in production, use a complete version like x.x.x, see website for latest version:
+    https://www.algolia.com/doc/guides/building-search-ui/installation/js/#load-the-styles
+  -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.css@8/themes/satellite-min.css">
+  <link rel="stylesheet" href="./src/index.css">
+  <link rel="stylesheet" href="./src/app.css">
+
+  <title>tectonica_search_2</title>
+</head>
+
+<body>
+  <header class="header">
+    <h1 class="header-title">
+      <a href="/">tectonica_search_2</a>
+    </h1>
+    <p class="header-subtitle">
+      using
+      <a href="https://github.com/algolia/instantsearch/tree/master/packages/instantsearch.js">
+        InstantSearch.js
+      </a>
+    </p>
+  </header>
+  <div id="searchbox"></div>
+  <div class="container">
+    <div class="search-panel">
+    <!-- Encabezado colapsable solo en móviles -->
+    <div class="filters-header" id="filtersToggle">
+      <span>FILTROS</span>
+      <span class="arrow">▼</span> <!-- Flecha para indicar que se puede expandir -->
+    </div>
+
+    <!-- Filtros colapsables -->
+    <div class="search-panel__filters filters-collapsed" id="filtersContainer">
+      <div id="type-list"></div>
+      <div id="categorias_unicas-list"></div>
+    </div>
+  
+      <div class="search-panel__results">
+        <div id="current-refinements"></div>
+        <div id="hits"></div>
+      </div>
+    </div>
+  </div>
+  <div id="pagination"></div>
+  
+
+  <script src="https://cdn.jsdelivr.net/npm/algoliasearch@4.10.5/dist/algoliasearch-lite.umd.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/instantsearch.js@4.74.0"></script>
+  <script src="./src/app.js"></script>
+</body>
+
+</html>
