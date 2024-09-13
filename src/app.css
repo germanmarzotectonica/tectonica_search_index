@@ -97,11 +97,11 @@
 }
 
 #searchbox {
-  order: 1; /* Searchbox siempre en la parte superior */
-  width: 80%;
   padding-top: 30px;
-  text-align: center;
+  width: 70%; /* Ajusta el ancho según sea necesario */
   margin: 30px auto; /* Centra el searchbox con margen automático */
+  text-align: center; /* Asegura que el contenido esté centrado */
+  order:0;
 }
 
 
@@ -234,18 +234,11 @@
   white-space: normal;
 }
 
-.ais-Hits-item.hover h1 {
-  color: #3300ff;
-}
-
-.ais-Hits-item.hover p {
-  color: #333;
-}
 
 /* Efectos visuales al hacer hover, como sombra */
 .ais-Hits-item:hover {
-  z-index: 10; /* Elevar la tarjeta sobre las demás */
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada */
+  z-index: 5; /* Elevar la tarjeta sobre las demás */
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.12); /* Sombra más pronunciada */
 }
 
 
@@ -312,6 +305,7 @@
   align-items: center;
 }
 
+/*Stye of tags*/
 #categorias_unicas-list .ais-RefinementList-label {
   background-color: #f1f1f1; /* Light gray background for the tags */
   color: #4f4f4f; /* Darker gray text */
@@ -336,6 +330,7 @@
   display: none;
 }
 
+/*Stye of tags when selected*/
 #categorias_unicas-list .ais-RefinementList-item--selected .ais-RefinementList-label {
   background-color: #d8d7d7; /* Mantén el color gris oscuro al seleccionar */
   color: #333;
@@ -348,11 +343,28 @@
   padding: 2px;
   display: flex;
   flex-wrap:nowrap; /* Permitir que los filtros seleccionados se ajusten en varias líneas */
+  overflow-x: auto;
   justify-content: left; /* Asegura que los filtros estén centrados */
   align-items: left;
   border-radius: 5px;
   background-color: #f9f9f9;
+  gap: 100px;
+  white-space: nowrap; /* Asegura que los filtros se mantengan en una sola línea */
+  max-width:100vw; /* Limita el ancho al 100% del contenedor padre */
+  box-sizing: border-box; /* Asegura que el padding no expanda el ancho */
+  border-bottom: 1px solid #ddd; /* Línea inferior para separar visualmente */
 }
+
+#current-refinements .selected-filter {
+  display: inline-block;
+  background-color: #f1f1f1; /* Fondo de cada filtro */
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  color: #333;
+  white-space: nowrap; /* Evita que los filtros seleccionados se desborden */
+}
+
 /* Estilo para el nombre del filtro (CATEGORIAS, TIPO DE CONTENIDO) */
 .filter-label {
   font-weight: bold;

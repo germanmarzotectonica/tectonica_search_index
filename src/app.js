@@ -18,7 +18,7 @@ const search = instantsearch({
 search.addWidgets([
   instantsearch.widgets.searchBox({
     container: '#searchbox',
-    placeholder: 'Busca en Tectónica...',
+    placeholder: 'Buscar en Tectónica...',
     searchAsYouType: false, // Desactiva las búsquedas mientras escribes
     searchOnEnterKeyPressOnly: true
   }),
