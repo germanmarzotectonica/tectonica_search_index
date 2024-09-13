@@ -1,8 +1,8 @@
 const { algoliasearch, instantsearch } = window;
 
 const searchClient = algoliasearch(
-  '2281D49FQH',
-  'c585b6abfc131b46f3475ae1ed346bee'
+  '2281D49FQH', // ID APP
+  'APIKEY' // API KEY
 );
 
 const search = instantsearch({
